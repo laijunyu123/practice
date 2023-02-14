@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>练习总体</title>
+		<style>
+			body {
+				display: flex;
+				/* 主轴居中(水平居中)*/
+				justify-content: center;
+				/* 辅轴居中(垂直居中) */
+				align-items: center;
+				height: 100vh;
+			}
+			#main {
+				width: 500px;
+				height: 500px;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			#main > button {
+				margin: 10px auto;
+				width: 150px;
+				height: 50px;
+				font-size: 18px;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main"></div>
+	</body>
+	<script>
+		// 获取主体
+		const Main = document.getElementById("main");
+
+		// 获取按钮
+		const ItemBtn = document.getElementsByClassName("item");
+
+		// 存储练习的路径
+		let arr = [
+			"./无缝轮播图/index.html",
+			"./普通轮播图/index.html",
+			"./按钮的同步/index.html",
+			"./表格的操作/index.html",
+			"./贪吃蛇/index.html",
+			"./图库/index.html",
+			"./键盘/index.html",
+			"./笑话生成器/index.html",
+			"./歌词/index.html",
+			"./购物车/index.html"
+		];
+
+		// 添加button
+		arr.forEach((item) => {
+			const Btn = document.createElement("button");
+			Btn.classList.add("item");
+			// 获取 / 的索引后 截取
+			a = item.indexOf("/", 0);
+			b = item.indexOf("/", a + 1);
+			const BtnText = item.substring(a + 1, b);
+			Btn.textContent = BtnText;
+			Main.appendChild(Btn);
+		});
+
+		// 跳转页面
+		Array.from(ItemBtn).forEach((item, i) => {
+			item.onclick = () => {
+				location.href = arr[i];
+			};
+		});
+	</script>
+</html>

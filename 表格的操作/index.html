@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>表格的操作</title>
+		<link rel="stylesheet" href="./index.css" />
+		<!-- <script defer src="./index.js"></script> -->
+		<script defer src="./index-2.js"></script>
+	</head>
+	<body>
+		<table>
+			<caption>
+				人员管理表
+			</caption>
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>性别</th>
+					<th>邮箱</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="num">1</td>
+					<td class="empName">孙悟空</td>
+					<td class="epmAge">18</td>
+					<td class="empGender">男</td>
+					<td class="empEmail">swk@swk.com</td>
+					<td>
+						<a href="javascript:;" class="revise">修改</a>
+						<a href="javascript:;" class="delete">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>猪八戒</td>
+					<td>28</td>
+					<td>女</td>
+					<td>zbj@zbj.com</td>
+					<td>
+						<a href="javascript:;" class="revise">修改</a>
+						<a href="javascript:;" class="delete">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>沙和尚</td>
+					<td>38</td>
+					<td>男</td>
+					<td>shh@swk.com</td>
+					<td>
+						<a href="javascript:;" class="revise">修改</a>
+						<a href="javascript:;" class="delete">删除</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr style="margin-bottom: 20px" />
+		<form action="">
+			<div>
+				<label for="userId"
+					><span class="num">序号</span>: <input type="text" id="userId"
+				/></label>
+			</div>
+
+			<div>
+				<label for="userName">
+					请输入姓名: <input type="text" id="userName"
+				/></label>
+			</div>
+
+			<div>
+				<label for="userAge">
+					请输入年龄: <input type="number" min="0" id="userAge"
+				/></label>
+			</div>
+
+			<div class="gender">
+				<span class="gender">请选择性别</span>
+				<label for="male"
+					><input type="radio" name="gender" checked id="male" value="男" />
+					男</label
+				>
+				<label for="flmale"
+					><input type="radio" name="gender" id="flmale" value="女" /> 女</label
+				>
+			</div>
+
+			<div>
+				<label for="userEmail"
+					>请输入邮箱: <input type="text" id="userEmail"
+				/></label>
+			</div>
+			<div>
+				<button id="reset" type="button">重置</button>
+				<button id="send" type="button">提交</button>
+				<button id="add" type="button">添加</button>
+			</div>
+		</form>
+	</body>
+</html>

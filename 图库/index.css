@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main-wrapper {
+    width: 640px;
+    height: 468px;
+    margin: 100px auto;
+}
+
+/* 设置大图容器 */
+#img-wrapper {
+    width: 640px;
+    height: 390px;
+    position: relative;
+    /* display: flex; */
+    /* 辅轴居中(垂直居中) */
+    /* align-items: center; */
+    /* 主轴居中(水平居中)*/
+    /* justify-content: center; */
+}
+
+/* 设置大图样式 */
+#img-wrapper>img {
+    width: 640px;
+    height: 390px;
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+}
+
+#img-wrapper>.active {
+    opacity: 1;
+}
+
+/* 设置小图容器 */
+#img-item {
+    display: flex;
+}
+
+/* 设置小图 */
+#img-item>img {
+    width: 128px;
+    height: 78px;
+}

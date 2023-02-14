@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#main-wrapper{
+    width: 600px;
+    height: 400px;
+    margin: 100px auto;
+    position: relative;
+} 
+ #wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+#img-wrapper{
+    list-style: none;
+    height: 400px;
+    width: 600px;
+}
+.img-item{
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+}
+#img-wrapper .img-item img{
+    width: 600px;
+    height: 400px;
+    vertical-align: top;
+}
+
+#img-wrapper .img-dis{
+    opacity: 1;
+    z-index: 1;
+}
+
+/* 小圆点 */
+
+#box-wrapper{
+    display: inline-block;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    transform:  translate(-50%);
+    z-index: 1;
+}
+
+
+#wrapper #box-wrapper span {
+    display:inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    margin: 0px 5px;
+    transition: .5s;
+}
+
+#wrapper #box-wrapper span:hover{
+    opacity: 0.9;
+}
+#wrapper #box-wrapper span.active{
+    opacity: .9;
+}
+
+#btn-wrapper{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+#btn-wrapper >i:nth-child(2){
+    position: absolute;
+    right: 0;
+}
+#btn-wrapper >i{
+    font-size: 90px;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+#wrapper #btn-wrapper > i:hover{
+    opacity: 0.3;
+}
