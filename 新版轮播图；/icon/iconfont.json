@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6129066",
+      "name": "33上一页、前一页",
+      "font_class": "shangyiyeqianyiye",
+      "unicode": "e764",
+      "unicode_decimal": 59236
+    },
+    {
+      "icon_id": "6129067",
+      "name": "31下一页、后一页",
+      "font_class": "xiayiyehouyiye",
+      "unicode": "e765",
+      "unicode_decimal": 59237
+    }
+  ]
+}
