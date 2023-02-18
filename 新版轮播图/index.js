@@ -61,6 +61,7 @@ class Img {
 		}
 	}
 
+	// 自动轮播
 	autoImg() {
 		if (this.time === null) {
 			this.time = setTimeout(
